@@ -1,12 +1,14 @@
 package model;
 
+import java.util.HashMap;
+
 public class User {
-	
 	public String name;
 	public int age;
 	public String userName;
 	public String password;
 	public String email;
+	public HashMap<String, Expense> expenses;
 	public boolean isValidated;
 	
 	
@@ -14,18 +16,20 @@ public class User {
 	
 	public User() {
 		
+		this.expenses = new HashMap<String, Expense>();
 	}
 	
-	public User(String name, int age, String userName, String password, String email) {
+	public User(String name, int age, String userName, String password, String email, HashMap<String, Expense>expenses) {
 		
 		this.name = name;
 		this.age = age;
 		this.userName = userName;
 		this.password = password;
 		this.email = email;
+		this.expenses = new HashMap<String, Expense>();
 	}
 	
-	
+	//
 	//Getters and setters
 
 	public String getName() {
@@ -67,12 +71,20 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+
+	public  HashMap<String, Expense> getExpenses() {
+		return expenses;
+	}
+
+	public void setExpenses(HashMap<String, Expense> expenses) {
+		expenses = expenses;
+	}
 
 	@Override
 	public String toString() {
-		return "User (name=" + name + ", age=" + age + ", userName=" + userName + ", password=" + password + ", email="
-				+ email + ")";
+		return "User [name=" + name + ", age=" + age + ", userName=" + userName + ", password=" + password + ", email="
+				+ email + "]";
 	}
-
 
 }
