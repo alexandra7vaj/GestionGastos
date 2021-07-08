@@ -12,9 +12,9 @@ public class MenuExpense {
 		
 		System.out.println("3-And delete if is necesary anytime ");
 		
-		//System.out.println("4-Quit if you've completed your appointments");
+		System.out.println("4-Quit if you've completed your appointments");
 		
-		System.out.println("Search"); //Option HashMap to Date.
+		System.out.println("5-Search"); //Option HashMap to Date.
 	
    }
 }
