@@ -1,6 +1,6 @@
 package controller;
 
-import java.awt.Menu;
+import menu.Menu; // don't use "import java.awt.Menu" because is property the java && don't my;
 import java.util.Scanner;
 
 import model.User;
@@ -15,7 +15,7 @@ public class ExpenseController {public static void AppStarting() {
 	
 	while(true) {
 	
-		Menu.mainMenu();// ¿?
+		Menu.mainMenu(); // or if I use "import java.awt.Menu" I can put "menu.Menu.mainMenu();"
 		
 		int keyboard = reader.nextInt();
 		
